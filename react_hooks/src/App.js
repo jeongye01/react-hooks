@@ -1,10 +1,51 @@
 import './App.css';
-import React,{useState} from "react";
-import {useInput} from'./useInput'; 
+import React,{useState,useEffect} from "react";
+//import {useInput} from'./useInput'; 
+//import {useTabs} from './useTabs';
 //import Axios from "axios";
 
+const useTitle=(iniitialTitle)=>{
+  const [title,setTitle]=useState(iniitialTitle);
+  const updateTitle=()=>{
+    const htmlTitle=document.querySelector("title");
+    htmlTitle.innerText=title;
+  };
+  useEffect(updateTitle,[title]);
+  return setTitle;
+};
+function App(){
+  const titleUpdater=useTitle("Loding...");
+  setTimeout(()=>titleUpdater("Home"),5000);
+  return(
+    <div></div>
+  );
 
-const content=[
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*const content=[
   {
     tab: "Section 1",
     cont: "I'm the content of the Section 1"
@@ -14,19 +55,8 @@ const content=[
     cont: "I'm the content of the Section 2"
   }
 ];
-const useTabs=(initialTab,allTabs)=>{
-  const [currentIndex,setCurrentIndex]=useState(initialTab);
- 
-  if(!allTabs || Array.isArray(allTabs)){
-    return;
-  }
-  
-  return{
-    currentItem: allTabs[currentIndex],
-    changeItem:setCurrentIndex
-  };
-};
- function App(){
+
+ /*function App(){
    
    const [item,setItem]=useState(1);
    const incrementItem=()=>setItem(item+1);
@@ -46,6 +76,6 @@ const useTabs=(initialTab,allTabs)=>{
        <div>{currentItem.cont}</div>
      </div>
    );
-};
+};*/
 
 export default App;
