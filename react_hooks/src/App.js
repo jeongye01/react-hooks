@@ -1,18 +1,31 @@
 import './App.css';
-import React,{useState,useEffect} from "react";
+import React,{useState,useEffect,useRef} from "react";
 //import {useInput} from'./useInput'; 
 //import {useTabs} from './useTabs';
 //import Axios from "axios";
 
-const useTitle=(iniitialTitle)=>{
-  const [title,setTitle]=useState(iniitialTitle);
-  const updateTitle=()=>{
-    const htmlTitle=document.querySelector("title");
-    htmlTitle.innerText=title;
-  };
-  useEffect(updateTitle,[title]);
-  return setTitle;
-};
+
+
+
+
+
+function App(){
+  const sayHello=()=>console.log("say hello");
+  const title=useClick(sayHello);
+  return(
+    <div className="App">
+      <h1 ref={title}>Hi</h1>
+    </div>
+  );
+
+}
+
+
+
+
+
+
+/*
 function App(){
   const titleUpdater=useTitle("Loding...");
   setTimeout(()=>titleUpdater("Home"),5000);
