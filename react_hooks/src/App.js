@@ -4,11 +4,23 @@ import React,{useState,useEffect,useRef} from "react";
 //import {useTabs} from './useTabs';
 //import Axios from "axios";
 
-const useBeforeLeave=()=>{
 
+
+
+
+
+
+
+/*
+const App=()=>{
+  const begForLife=()=>console.log("Pls dont leave");
+  useBeforeLeave(begForLife);
+  return (
+    <div className="App">
+      <h1>hello</h1>
+    </div>
+  );
 };
-
-
 
 
 
