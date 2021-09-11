@@ -12,7 +12,8 @@ Useful React-Hooks
 1.useTitle
 2.useClick
 3.useBeforeLeave
-
+4.useFadeIn
+5.useNetwork
 --
 1.useConfirm
 2.usePreventLeave

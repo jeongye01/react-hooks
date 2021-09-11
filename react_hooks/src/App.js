@@ -4,9 +4,22 @@ import React,{useState,useEffect,useRef} from "react";
 //import {useTabs} from './useTabs';
 //import Axios from "axios";
 
+const useFadeIn=()=>{
+  const element=useRef();
+  useEffect(()=>{
 
+  });
+  return element;
+};
 
-
+const App=()=>{
+  const el=useFadeIn();
+  return(
+    <div className="App">
+      <h1 ref={el} style={{opacity:0}}>Hello</h1>
+    </div>
+  );
+};
 
 
 
