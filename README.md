@@ -11,6 +11,8 @@ Useful React-Hooks
 
 1.useTitle
 2.useClick
+3.useBeforeLeave
 
+--
 1.useConfirm
 2.usePreventLeave

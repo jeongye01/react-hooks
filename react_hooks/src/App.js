@@ -4,11 +4,44 @@ import React,{useState,useEffect,useRef} from "react";
 //import {useTabs} from './useTabs';
 //import Axios from "axios";
 
+const useBeforeLeave=()=>{
+
+};
 
 
 
 
 
+/*
+const App=()=>{
+  const {enablePrevent,disablePrevent}=usePreventLeave();
+  return(
+    <div className="App">
+      <button onClick={disablePrevent}>Protect</button>
+      <button onClick={disablePrevent}>Unprotect</button>
+    </div>
+  );
+
+};
+
+
+
+
+
+/*
+const App=()=>{
+  const deleteWorld=()=>console.log("Deleting the world...");
+  const confirmDelete=useConfirm("Are you sure",deleteWord);
+  return(
+    <div className="App">
+      <button onClick={confirmDelete}>Delete the world</button>
+    </div>
+  );
+};
+
+
+
+/*
 function App(){
   const sayHello=()=>console.log("say hello");
   const title=useClick(sayHello);
