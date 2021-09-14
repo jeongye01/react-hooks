@@ -3,15 +3,7 @@ import React,{useState,useEffect,useRef} from "react";
 //import {useInput} from'./useInput'; 
 //import {useTabs} from './useTabs';
 //import Axios from "axios";
-const useFullscreen=()=>{
-  const element=useRef();
-  const triggerFull=()=>{
-    if(element.current){
-      element.current.requestFullscreen();
-    }
-  };
-  return {element,triggerFull};
-}
+
 
 const App=()=>{
   const fadeInH1=useFadeIn();
