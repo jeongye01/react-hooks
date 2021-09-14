@@ -3,21 +3,15 @@ import React,{useState,useEffect,useRef} from "react";
 //import {useInput} from'./useInput'; 
 //import {useTabs} from './useTabs';
 //import Axios from "axios";
-
-const useFadeIn=(duration=1,delay=0)=>{
-  if(typeof duration !=="number" || typeof delay !=="number"){
-    return ;
-  }
+const useFullscreen=()=>{
   const element=useRef();
-  useEffect(()=>{
+  const triggerFull=()=>{
     if(element.current){
-      const {current}=element;
-      current.style.transition=`opacity ${duration}s ease-in-out ${delay}s`;
-      current.style.opacity=1;
+      element.current.requestFullscreen();
     }
-  },[]);
-  return {ref:element,style:{opacity:0}};
-};
+  };
+  return {element,triggerFull};
+}
 
 const App=()=>{
   const fadeInH1=useFadeIn();
