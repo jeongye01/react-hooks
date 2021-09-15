@@ -14,6 +14,8 @@ Useful React-Hooks
 3.useBeforeLeave
 4.useFadeIn
 5.useNetwork
+6.useScroll
+7.useFullscreen
 --
 1.useConfirm
 2.usePreventLeave
