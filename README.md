@@ -16,7 +16,8 @@ Useful React-Hooks
 5.useNetwork
 6.useScroll
 7.useFullscreen
-8.UseNotification
+8.useAxios
 --
 1.useConfirm
 2.usePreventLeave
+3.UseNotification
